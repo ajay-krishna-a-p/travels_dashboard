@@ -1,0 +1,92 @@
+/* toastAnimations.css */
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.toast {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.toast-enter {
+  animation-name: slideInRight;
+}
+
+.toast-exit {
+  animation-name: slideOutRight;
+}
+
+/* Custom styling for different types of toasts */
+
+/* Warning Toast */
+.toast.warning {
+  background-color: #ffc107; /* Yellow background for warning */
+  color: #212529; /* Dark text color */
+}
+
+/* Danger Toast */
+.toast.danger {
+  background-color: #dc3545; /* Red background for danger */
+  color: #fff; /* White text color */
+}
+
+/* Delete Toast (assuming it's similar to danger) */
+.toast.delete {
+  background-color: #dc3545; /* Red background for danger */
+  color: #fff; /* White text color */
+}
+
+/* Error Toast (assuming it's similar to danger) */
+.toast.error {
+  background-color: #dc3545; /* Red background for danger */
+  color: #fff; /* White text color */
+}
+
+/* Update Toast */
+.toast.update {
+  background-color: #24c80e; /* Green background for update */
+  color: #000; /* Black text color */
+}
+
+/* Add Toast */
+.toast.add {
+  background-color: #040d85; /* Dark blue background for add */
+  color: #fff; /* White text color */
+}
+
+/* Status Toast */
+.toast.status {
+  background-color: #007bff; /* Blue background for status */
+  color: #fff; /* White text color */
+}
+
+/* Login Toast */
+.toast.login {
+  background-color: #28a745; /* Green background for login */
+  color: #fff; /* White text color */
+}
+
+/* Logout Toast */
+.toast.logout {
+  background-color: #6c757d; /* Gray background for logout */
+  color: #fff; /* White text color */
+}
+.toast.passworderror {
+  background-color: #dc3545; /* Red background for danger */
+  color: #fff; /* White text color */
+}
