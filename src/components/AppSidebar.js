@@ -30,18 +30,19 @@ const AppSidebar = () => {
   return (
     <CSidebar
       className="border-end"
-      colorScheme="light"
+      colorScheme="dark"
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
       onVisibleChange={(visible) => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
+      style={{color:'blue',backgroundColor:'#344ba1'}}
     >
       <CSidebarHeader className="border-bottom">
         <CSidebarBrand to="/" >
           
-          <Image src='\assets\car.png' style={{height:'90px',width:'140px',justifyItems:'center',paddingLeft:'50px',display:'flex'}}></Image>
+          <Image src='\assets\transport (1).png' style={{height:'90px',width:'148px',justifyItems:'center',paddingLeft:'60px',display:'flex'}}></Image>
           {/* <img src={} style={{height:'60px',width:'140px',justifyItems:'center',paddingLeft:'50px',display:'flex'}}/> */}
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
         </CSidebarBrand>
@@ -53,9 +54,9 @@ const AppSidebar = () => {
       </CSidebarHeader>
       <AppSidebarNav items={navigation} />
       <CSidebarFooter className="border-top d-none d-lg-flex">
-        <CSidebarToggler
+        {/* <CSidebarToggler
           onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
-        />
+        /> */}
       </CSidebarFooter>
     </CSidebar>
   )

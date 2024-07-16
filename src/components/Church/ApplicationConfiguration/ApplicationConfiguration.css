@@ -1,9 +1,0 @@
-.switch-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.switch-container h5 {
-    margin-right: 8px; /* Adjust as needed for consistent spacing */
-}
