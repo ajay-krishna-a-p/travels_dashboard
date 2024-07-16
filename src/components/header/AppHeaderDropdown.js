@@ -86,10 +86,10 @@ const AppHeaderDropdown = () => {
   return (
     <CDropdown variant="nav-item">
       <CDropdownToggle placement="bottom-end" className="py-0 pe-0" caret={false}>
-        <CAvatar  size="md" ><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></CAvatar>
+        <CAvatar  size="md" style={{color:'white'}}><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></CAvatar>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
-        <CDropdownHeader className="bg-body-secondary fw-semibold mb-2">Account</CDropdownHeader>
+        {/* <CDropdownHeader className="bg-body-secondary fw-semibold mb-2">Account</CDropdownHeader>
         <CDropdownItem href="#">
           <CIcon icon={cilBell} className="me-2" />
           Updates
@@ -140,8 +140,12 @@ const AppHeaderDropdown = () => {
           <CBadge color="primary" className="ms-2">
             42
           </CBadge>
+        </CDropdownItem> */}
+        {/* <CDropdownDivider /> */}
+        <CDropdownItem >
+          <CIcon icon={cilUser} className="me-2" />
+         {auth.currentUser.email}
         </CDropdownItem>
-        <CDropdownDivider />
         <CDropdownItem onClick={handleLogout} href="/">
           <CIcon icon={cilLockLocked} className="me-2" />
           Sign Out

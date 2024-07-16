@@ -26,7 +26,8 @@ import {
 } from '@coreui/icons'
 
 import { AppBreadcrumb } from './index'
-import { AppHeaderDropdown } from './header/index'
+import { AppHeaderDropdown} from './header/index'
+import AppHeaderNotification  from './header/AppHeaderNotification'
 
 const AppHeader = () => {
   const headerRef = useRef()
@@ -49,33 +50,33 @@ const AppHeader = () => {
   }, [])
 
   return (
-    <CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
-      <CContainer className="border-bottom px-4" fluid>
+    <CHeader position="sticky" className="mb-4 p-0" ref={headerRef} >
+      <CContainer className="border-bottom px-4" fluid style={{backgroundColor:'#344ba1'}}>
         <CHeaderToggler
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
-          style={{ marginInlineStart: '-14px' }}
+          style={{ marginInlineStart: '-14px',color:'white' }}
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
         <CHeaderNav className="d-none d-md-flex">
           <CNavItem>
-            <CNavLink to="/dashboard" as={NavLink}>
+            <CNavLink to="/dashboard" as={NavLink} style={{color:'white'}}>
               Dashboard
             </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">Users</CNavLink>
+            <CNavLink href="#" style={{color:'white'}}>Users</CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
+            <CNavLink href="#" style={{color:'white'}}>Settings</CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-auto">
-          <CNavItem>
+          {/* <CNavItem>
             <CNavLink href="#">
-              <CIcon icon={cilBell} size="lg" />
+              <CIcon icon={cilBell} size="lg" style={{color:'white'}}/>
             </CNavLink>
-          </CNavItem>
+          </CNavItem> */}
           {/* <CNavItem>
             <CNavLink href="#">
               <CIcon icon={cilList} size="lg" />
@@ -86,6 +87,14 @@ const AppHeader = () => {
               <CIcon icon={cilEnvelopeOpen} size="lg" />
             </CNavLink>
           </CNavItem> */}
+        </CHeaderNav>
+        <CHeaderNav >
+          <CNavItem>
+            <CNavLink >
+
+            <AppHeaderNotification />
+            </CNavLink>
+          </CNavItem>
         </CHeaderNav>
         <CHeaderNav>
           {/* <li className="nav-item py-1">

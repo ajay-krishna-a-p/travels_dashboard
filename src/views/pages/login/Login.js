@@ -223,7 +223,7 @@ const date=new Date();
               </CCard>
                <CCard  style={{ width: '4%', }}>
                 <CCardBody className="text-center" style={{alignContent:'center'}}>
-                <Image src='\assets\church_7279063.png' style={{height:'100px',width:'100px'}}/>
+                <Image src='\assets\transport.png' style={{height:'200px',width:'200px'}}/>
                 </CCardBody>
               </CCard>
               {/* <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>

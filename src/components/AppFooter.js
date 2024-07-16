@@ -7,7 +7,7 @@ const AppFooter = () => {
     <CFooter className="px-4">
       <div>
         <a href="https://www.kenmerksoftwares.com" target="_blank" rel="noopener noreferrer">
-          CHURCH
+          TRAVELS
         </a>
         <span className="ms-1">&copy; {currentYear}</span>
       </div>
