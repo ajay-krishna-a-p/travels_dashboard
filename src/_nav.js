@@ -158,6 +158,20 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: 'Vehicle History',
+    to: '/VehicleHistory',
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    //  permissions: ['Report Historyread'],
+  },
+  {
+    component: CNavItem,
+    name: 'Maintanance History',
+    to: '/MaintananceHistory',
+    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    //  permissions: ['Report Historyread'],
+  },
+  {
+    component: CNavItem,
     name: 'Driver Documents',
     to: '/DriverDocuments',
     icon: <CIcon icon={cilUser} customClassName="nav-icon" />,

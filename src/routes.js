@@ -122,6 +122,9 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 //Travels
 const AttendanceSheet = React.lazy(() => import('./components/Travels/AttendanceSheet/AttendanceSheet.jsx'))
+const AddAttendanceSheet = React.lazy(() => import('./components/Travels/AttendanceSheet/AddAttendanceSheet.jsx'))
+const EditAttendanceSheet = React.lazy(() => import('./components/Travels/AttendanceSheet/EditAttendanceSheet.jsx'))
+const ViewAttendanceSheet = React.lazy(() => import('./components/Travels/AttendanceSheet/ViewAttendanceSheet.jsx'))
 const DriverBasedPerformanceChart = React.lazy(() => import('./components/Travels/DriverBasedPerformanceChart/DriverBasedPerformanceChart.jsx'))
 const DriverDocuments = React.lazy(() => import('./components/Travels/DriverDocuments/DriverDocuments.jsx'))
 const AddDriverDocuments = React.lazy(() => import('./components/Travels/DriverDocuments/AddDriverDocument.jsx'))
@@ -129,17 +132,30 @@ const ViewDriverDocument = React.lazy(() => import('./components/Travels/DriverD
 const EditDriverDocument = React.lazy(() => import('./components/Travels/DriverDocuments/EditDriverDocument.jsx'))
 const DriverPaymentStatus = React.lazy(() => import('./components/Travels/DriverPaymentStatus/DriverPaymentStatus.jsx'))
 const DriverPerformance = React.lazy(() => import('./components/Travels/DriverPerformance/DriverPerformance.jsx'))
+const AddDriverPerformance = React.lazy(() => import('./components/Travels/DriverPerformance/AddDriverPerformance.jsx'))
+const EditDriverPerformance = React.lazy(() => import('./components/Travels/DriverPerformance/EditDriverPerformance.jsx'))
+const ViewDriverPerformance = React.lazy(() => import('./components/Travels/DriverPerformance/ViewDriverPerformance.jsx'))
 const ExpenseSheet = React.lazy(() => import('./components/Travels/ExpenseSheet/ExpenseSheet.jsx'))
 const ExpiryData = React.lazy(() => import('./components/Travels/ExpiryData/ExpiryData.jsx'))
 const PaymentSheet = React.lazy(() => import('./components/Travels/PaymentSheet/PaymentSheet.jsx'))
 const PerformanceChart = React.lazy(() => import('./components/Travels/PerformanceChart/PerformanceChart.jsx'))
+const AddPerformanceChart = React.lazy(() => import('./components/Travels/PerformanceChart/AddPerformanceChart.jsx'))
+const EditPerformanceChart = React.lazy(() => import('./components/Travels/PerformanceChart/EditPerformanceChart.jsx'))
+const ViewPerformanceChart = React.lazy(() => import('./components/Travels/PerformanceChart/ViewPerformanceChart.jsx'))
+
 const VehicleDocuments = React.lazy(() => import('./components/Travels/VehicleDocuments/VehicleDocuments.jsx'))
 const EditVehicleDocuments = React.lazy(() => import('./components/Travels/VehicleDocuments/EditVehicleDocuments.jsx'))
 const AddVehicleDocuments = React.lazy(() => import('./components/Travels/VehicleDocuments/AddVehicleDocuments.jsx'))
 const WeeklyBasedPerformanceSheet = React.lazy(() => import('./components/Travels/WeeklyBasedPerformanceSheet/WeeklyBasedPerformanceSheet.jsx'))
 const YearlyBasedPerformanceChart = React.lazy(() => import('./components/Travels/YearlyBasedPerformanceChart/YearlyBasedPerformanceChart.jsx'))
-
-
+const VehicleHistory = React.lazy(() => import('./components/Travels/VehicleHistory/VehicleHistory.jsx'))
+const AddVehicleHistory = React.lazy(() => import('./components/Travels/VehicleHistory/AddVehicleHistory.jsx'))
+const EditVehicleHistory = React.lazy(() => import('./components/Travels/VehicleHistory/EditVehicleHistory.jsx'))
+const ViewVehicleHistory = React.lazy(() => import('./components/Travels/VehicleHistory/ViewVehicleHistory.jsx'))
+const MaintananceHistory = React.lazy(() => import('./components/Travels/MaintananceHistory/MaintananceHistory.jsx'))
+const AddMaintananceHistory = React.lazy(() => import('./components/Travels/MaintananceHistory/AddMaintananceHistory.jsx'))
+const EditMaintananceHistory = React.lazy(() => import('./components/Travels/MaintananceHistory/EditMaintananceHistory.jsx'))
+const ViewMaintananceHistory = React.lazy(() => import('./components/Travels/MaintananceHistory/ViewMaintananceHistory.jsx'))
 
 
 
@@ -149,6 +165,9 @@ const YearlyBasedPerformanceChart = React.lazy(() => import('./components/Travel
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/attendanceSheet', name: 'Attendance Sheet', element: AttendanceSheet },
+  { path: '/EditattendanceSheet', name: 'Edit Attendance Sheet', element: EditAttendanceSheet },
+  { path: '/AddattendanceSheet', name: 'Add Attendance Sheet', element: AddAttendanceSheet },
+  { path: '/ViewattendanceSheet', name: 'View Attendance Sheet', element: ViewAttendanceSheet },
   { path: '/DriverBasedPerformanceChart', name: 'Driver based Performance chart', element: DriverBasedPerformanceChart },
   { path: '/DriverDocuments', name: 'Driver Documents', element: DriverDocuments },
   { path: '/AddDriverDocuments', name: 'Add Driver Documents', element: AddDriverDocuments },
@@ -156,17 +175,29 @@ const routes = [
   { path: '/EditDriverDocument', name: 'Edit Driver Documents', element: EditDriverDocument },
   { path: '/DriverPaymentStatus', name: 'Driver Payment Status', element: DriverPaymentStatus },
   { path: '/DriverPerformance', name: 'Driver Performance', element: DriverPerformance },
+  { path: '/AddDriverPerformance', name: 'Add Driver Performance', element: AddDriverPerformance },
+  { path: '/EditDriverPerformance', name: 'Edit Driver Performance', element: EditDriverPerformance },
+  { path: '/ViewDriverPerformance', name: 'View Driver Performance', element: ViewDriverPerformance },
   { path: '/ExpenseSheet', name: 'Expense Sheet', element: ExpenseSheet },
   { path: '/ExpiryData', name: 'Expiry Data', element: ExpiryData },
   { path: '/PaymentSheet', name: 'Payment Sheet', element: PaymentSheet },
   { path: '/PerformanceChart', name: 'Performance Chart', element: PerformanceChart },
+  { path: '/AddPerformanceChart', name: 'Add Performance Chart', element: AddPerformanceChart },
+  { path: '/EditPerformanceChart', name: 'Edit Performance Chart', element: EditPerformanceChart },
+  { path: '/ViewPerformanceChart', name: 'View Performance Chart', element: ViewPerformanceChart },
   { path: '/VehicleDocuments', name: 'Vehicle Documents', element: VehicleDocuments },
   { path: '/AddVehicleDocuments', name: 'Add Vehicle Documents', element: AddVehicleDocuments },
   { path: '/EditVehicleDocuments', name: 'Edit Vehicle Documents', element: EditVehicleDocuments },
   { path: '/WeeklyBasedPerformanceSheet', name: 'Weekly Based Performance Sheet', element: WeeklyBasedPerformanceSheet },
   { path: '/YearlyBasedPerformanceChart', name: 'Yearly Based Performance Chart', element: YearlyBasedPerformanceChart },
-
-
+  { path: '/VehicleHistory', name: 'Vehicle History', element: VehicleHistory },
+  { path: '/AddVehicleHistory', name: 'Add Vehicle History', element: AddVehicleHistory },
+  { path: '/EditVehicleHistory', name: 'Edit Vehicle History', element: EditVehicleHistory },
+  { path: '/ViewVehicleHistory', name: 'View Vehicle History', element: ViewVehicleHistory },
+  { path: '/MaintananceHistory', name: 'Maintanance History', element: MaintananceHistory },
+  { path: '/AddMaintananceHistory', name: 'Add Maintanance History', element: AddMaintananceHistory },
+  { path: '/EditMaintananceHistory', name: 'Edit Maintanance History', element: EditMaintananceHistory },
+  { path: '/ViewMaintananceHistory', name: 'View Maintanance History', element: ViewMaintananceHistory },
 
 
 
